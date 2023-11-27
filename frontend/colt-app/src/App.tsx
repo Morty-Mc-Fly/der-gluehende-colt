@@ -1,9 +1,16 @@
 import React from "react";
-
-import "./CSS/App.css";
+import Button from "./Components/Button/Button";
+import "./SCSS/App.scss";
 
 function App() {
-  return <div>test</div>;
+  return (
+    <div>
+      <Button text="Test" />
+      <Button text="Calendar" />
+      <Button text="Management" />
+      <Button text="Test" />
+    </div>
+  );
 }
 
 export default App;
