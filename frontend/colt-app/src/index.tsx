@@ -1,9 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./SCSS/index.scss";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 
+import Home from "./Pages/Home";
+import Layout from "./Pages/Layout";
+import Member from "./Pages/Member";
+import NoPage from "./Pages/NoPage";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import reportWebVitals from "./reportWebVitals";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="member" element={<Member />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
+}
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
