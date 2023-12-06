@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import Layout from "./Pages/Layout";
 import Member from "./Pages/Member";
 import NoPage from "./Pages/NoPage";
+import Attendance from "./Pages/Attendance";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="member" element={<Member />} />
+          <Route path="attendance" element={<Attendance />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
